@@ -9,7 +9,7 @@
 import UIKit
 import MobileCoreServices
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIDocumentPickerDelegate {
     
 //    @IBAction func writeFiles(_ sender: Any) {
 //
@@ -41,9 +41,6 @@ class ViewController: UIViewController {
         documentPicker.allowsMultipleSelection = false
         present(documentPicker, animated: true, completion: nil)
     }
-}
-
-extension ViewController: UIDocumentPickerDelegate {
    
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         
